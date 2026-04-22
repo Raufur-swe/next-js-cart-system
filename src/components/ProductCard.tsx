@@ -8,13 +8,13 @@ const ProductCard = ({ product }: { product: productType }) => {
       
       {/* Image */}
       <div className="relative w-full h-64 bg-gray-100">
-        <Image
-        loading="eager"
-          src={img}
-          alt={product.title}
-          fill
-          className="object-contain p-4 hover:scale-105 transition duration-300"
-        />
+       <Image
+  src={img}
+  alt={product.title}
+  fill
+  sizes="(max-width: 768px) 50vw, 25vw"
+  className="object-contain p-4 hover:scale-105 transition duration-300"
+/>
       </div>
 
       {/* Content */}
