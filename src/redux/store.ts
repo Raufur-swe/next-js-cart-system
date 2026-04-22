@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import storage from "redux-persist/lib/storage"; //browser local storage for save redux data
+import storage from "./storage"; //browser local storage for save redux data
 
 import productReducer from "../redux/features/productSlice";
 
@@ -24,6 +24,7 @@ const persistConfig = {
   key: "root",
   storage,
   version: 1,
+  blacklist: ["products"], // here we are blacklisting the products reducer because we don't want to persist the products state in local storage because it can be fetched from the server and also it can be large in size and we don't want to store it in local storage
 };
 
 // this persist reducer function will turn normal reducer to persisst reducer

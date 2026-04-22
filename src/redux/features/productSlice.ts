@@ -23,7 +23,7 @@ export const fetchProducts = createAsyncThunk<productType[]>(
     "products/fetchProducts",
             async ()=> {
         const data = await getProductes() ;
-        return data.slice(0,8)
+        return data
     }
 );
 

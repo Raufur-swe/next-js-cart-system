@@ -1,8 +1,8 @@
 // define the type of products array
 export interface productType{
-    id:number,
+    _id:number,
     title : string ,
     price:number,
     descriptio:string,
-    image : string[]
+    image : string
 }

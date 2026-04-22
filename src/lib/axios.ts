@@ -1,7 +1,7 @@
 // fetch data from axios
 import axios from "axios";
 const axiosInstance = axios.create({
-    baseURL: " https://api.escuelajs.co/api/v1/",
+    baseURL: "https://fakestoreapiserver.reactbd.org/api",
     headers:{
         "Content-Type" : "application/json",
     },
