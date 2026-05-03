@@ -3,6 +3,6 @@ export interface productType{
     _id:number,
     title : string ,
     price:number,
-    descriptio:string,
+    description:string,
     image : string
 }
