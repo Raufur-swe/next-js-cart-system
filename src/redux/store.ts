@@ -2,6 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import storage from "./storage"; //browser local storage for save redux data
 
 import productReducer from "../redux/features/productSlice";
+import cartReducer from '../redux/features/cartSlice'
 
 import {
   FLUSH,
@@ -18,6 +19,7 @@ import {
 // here  we comabaine all reducers
 const rootReducer = combineReducers({
   products: productReducer,
+  cart : cartReducer,
 });
 
 const persistConfig = {
