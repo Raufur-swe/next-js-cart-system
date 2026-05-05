@@ -5,6 +5,7 @@ import { useAppDispatch } from "../hooks/useAppDispatch";
 import { useAppSelector } from "../hooks/useAppSelector";
 import { fetchProducts } from "../redux/features/productSlice";
 import ProductCard from "../components/ProductCard";
+import Cart from "../components/Cart";
 
 const Page = () => {
   const dispatch = useAppDispatch();
@@ -56,7 +57,9 @@ const Page = () => {
   }
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+  <div className="flex min-h-screen">
+    <Cart/>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
 
       {/* যতগুলো visibleCount আছে ততগুলো product show হবে */}
       {products.slice(0, visibleCount).map((product) => (
@@ -64,6 +67,7 @@ const Page = () => {
       ))}
 
     </div>
+  </div>
   );
 };
 
